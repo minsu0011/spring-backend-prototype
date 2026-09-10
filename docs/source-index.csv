@@ -1,0 +1,10 @@
+﻿path,language,bytes
+src/main/java/kr/it/code/main/MyBackendApplication.java,java,314
+src/main/java/kr/it/code/main/common/utils/ResizeImageUtils.java,java,3194
+src/main/java/kr/it/code/main/common/vo/PageVO.java,java,3911
+src/main/java/kr/it/code/main/config/WebServletConfig.java,java,981
+src/main/java/kr/it/code/main/gallery/controller/GalleryController.java,java,1778
+src/main/java/kr/it/code/main/gallery/data/Gallery.java,java,1035
+src/main/java/kr/it/code/main/gallery/mapper/GalleryMapper.java,java,466
+src/main/java/kr/it/code/main/gallery/service/GalleryService.java,java,4960
+src/test/java/kr/it/code/main/MyBackendApplicationTests.java,java,210

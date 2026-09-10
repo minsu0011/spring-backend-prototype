@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper  PUBLIC "-//mybatis.org//DTD  Mapper//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper  namespace="kr.it.code.main.gallery.mapper.GalleryMapper">
+
+
+   <!-- 전체 데이터 개수  -->
+   <select id="getGalleryTotal"  parameterType="java.util.Map"  resultType="int" >
+          
+          select count(seq)  as  cnt 
+           from tb_gallery
+   
+   </select>
+   
+   
+      <!-- 페이지별 출력할 데이터 리스트   -->
+   <select id="getGalleryList"  parameterType="java.util.Map"   resultType="galleryResponse" >
+          
+          select seq,
+				       title,
+				       file_name,
+				       file_stored_name, 
+				       writer,
+				       date_format(create_date, '%Y-%m-%d %H:%i:%s') as create_date,
+				       date_format(ifnull(update_date, create_date),     '%Y-%m-%d %H:%i:%s') as update_date
+				from tb_gallery
+				order by seq desc
+				limit   #{offset},    #{rowCount}
+   </select>
+   
+
+
+   <insert id="addGallery"  parameterType="galleryRequest">
+   
+          insert   into   tb_gallery(title, writer,  file_name,  file_stored_name,  file_path,  thumb_file_name, thumb_file_path)
+          values( #{title},   #{writer},   #{fileName},     #{fileStoredName},   #{filePath},   #{thumbFileName},    #{thumbFilePath}  )
+   
+   </insert>	
+
+</mapper>

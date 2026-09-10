@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+               xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+               layout:decorate="~{layout/main_layout}">
+
+<!--여기에 쓰이는 내용이 config.html 에 css 블럭에 적용됨  -->
+<th:block layout:fragment="css">
+   <style>
+       body{
+           margin : 0;
+       }
+   </style>
+</th:block>
+<div layout:fragment="content">
+    <h1>안녕하세요.</h1>
+</div>
+
+</html>
