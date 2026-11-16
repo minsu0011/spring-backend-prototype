@@ -1,3 +1,11 @@
-# 테스트와 실행 범위
+# 실행 확인
 
-Java 21과 Gradle의 `compileJava`로 소스를 컴파일합니다. DB 통합에는 Mapper와 일치하는 MariaDB 테이블이 필요합니다. 업로드·권한·트랜잭션 경계는 컴파일과 별도의 테스트 대상입니다.
+저장소 루트에서:
+
+```bash
+gradle compileJava
+```
+
+Java 21과 Lombok annotation processing이 필요합니다. 실제 목록·등록 검사는 Mapper와 일치하는 MariaDB 테이블 및 업로드 경로를 준비한 뒤 수행합니다.
+
+[환경과 기본 실행](../README.md)
